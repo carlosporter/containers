@@ -1,0 +1,188 @@
+uaa:
+  host: localhost
+  port: 8080
+  path: /
+
+zones:
+  internal:
+    hostnames:
+      - 127.0.0.1
+      - 192.168.99.100
+
+jwt:
+  token:
+    verification-key: |
+      -----BEGIN PUBLIC KEY-----
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt41bFGWyFTJ5zgP8RMmu
+      /hwX5I6t+1XgFpITIww7kKqs+PumxRBrsVH2YBNXOe18YIqttxzZ8RixYLO3sVgR
+      cY3ICg6KEm7iBpVa+yQR+fAt0HyBfIwt8BbimUCpO3W4ygNsyQC++37VYCCW6Pfz
+      R8VxHeHleNlRrpdT7SLzlK1gGETovj2u0EiX/YlOVyKYkQM7G6nWcUwarKWPhWtI
+      0hdVemJF238R66hZxl985NBlHkr5KLrlxWBShR9W1L1fC0PKP8Ybgz3vAZBTimau
+      zRBrN8Uw37jhYkJTIsz2TPCylhDTkyfW5OZWvvDCzMHriGdvMT1hRau63b2wbBKo
+      CwIDAQAB
+      -----END PUBLIC KEY-----
+    signing-key: |
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEpAIBAAKCAQEAt41bFGWyFTJ5zgP8RMmu/hwX5I6t+1XgFpITIww7kKqs+Pum
+      xRBrsVH2YBNXOe18YIqttxzZ8RixYLO3sVgRcY3ICg6KEm7iBpVa+yQR+fAt0HyB
+      fIwt8BbimUCpO3W4ygNsyQC++37VYCCW6PfzR8VxHeHleNlRrpdT7SLzlK1gGETo
+      vj2u0EiX/YlOVyKYkQM7G6nWcUwarKWPhWtI0hdVemJF238R66hZxl985NBlHkr5
+      KLrlxWBShR9W1L1fC0PKP8Ybgz3vAZBTimauzRBrN8Uw37jhYkJTIsz2TPCylhDT
+      kyfW5OZWvvDCzMHriGdvMT1hRau63b2wbBKoCwIDAQABAoIBAQCn69YLTw4gflEY
+      vGSpuakyKBljq3RXnzSm8XQ4eBR2QO6FyhPD7UXYrxcqxgbio/VJjRVnlCl+fAyq
+      X0AKKnuq2v7K1IpUWsTFKRZW86TOd4AyX/VGMChGoWkksxcfoo8voPqA2QHfqyUi
+      EC5/a3dRjbvyjpsUeBxWEXNiWrtko7ttcWzjdxhFur5zm6vq49ztFEohxBNwWM4m
+      WHzZZqdidmIM/tHgkKssBf0dfZ9/hhfktxDXrkquL6MoqLnGPslal7MVXnx0ENZT
+      siXNRJ2ZX44oIcYhsRzB2BaCsEdtjfuDOKH3dIijYbUTBRas5CzLStywaGjeUUAz
+      Pm+UtvIBAoGBAOIx8mBSZdJp3pwZ9gT40dO7QEXxL/ML19WQqqKABeT1po6Jp7/y
+      mXtvIEWy9IN7Ff5VOJNci9OjgzqaT15nK3VR/Wdki1oQRGQ0Qx4Gg9EyndVZQvFA
+      w93S034nNfjXVjDrbFlDeVhvcBrQo02vrun+OdRTWtE45yDKvy/Vf0ZBAoGBAM+8
+      +FPmIVqT3a135ign0RXsSKguZRkF7eFWFuNP4Wpy6vE/hz00zY78WOac/wMxyXfE
+      aeefM3M5tqAWnvoWzicrNKr6K5lAOhvAMygpaEsJzIslEC8bjZJl5IpM+jGuApUh
+      t85tB7K9FPu1wt6jL1mrsGFhnLQO6TEadq0vglNLAoGAUrMCM9dMZP7SJe6T9UNn
+      q+rlV+0To9/rnKiUym7WONzbdXe8vkAbf3akrPb90Oh6pQ9RbQdEFC/PNejfJdvA
+      ltdQN7IaBOa3qo81DtBA94ZzEGLfR8dvFTYUnyYE5KMOXzpj1csGnZ+4tAUd/7RA
+      1kpdqFSFesM8NdAK0JlVPEECgYBzdzqkD5bcbLHbeHhSO4do4xOjf14sIXKOPDau
+      lDjb3RIfk8sMxyu2XSbgz8Situqfimm/F2sWka6jns8wfLqLZOV6X2EaZmul/xew
+      LAvPIZwyfyBWvr7a742vHYg3UtwWnk43C70qqRRfsDCnZRathdOc3Q+nuV3+MBJk
+      wrJyrwKBgQCZtfmZzMkULQljy0O8X39F9d2A2sT7L4x702YvafILTTqsYiIisUCj
+      iy70Rq2bEc6BFnYqoKsizWc7hze5FCEu7SXHuP09LNyWYE5pxI20Ri/5ru3fPkN1
+      EEpg5Yx7cj7E80y01igmm72+OuNbSeBCkUWn3pwI02Z4iiwuO7lkDA==
+      -----END RSA PRIVATE KEY-----
+
+
+scim:
+  groups:
+    zones.read: Read identity zones
+    zones.write: Create and update identity zones
+    idps.read: Retrieve identity providers
+    idps.write: Create and update identity providers
+    clients.admin: Create, modify and delete OAuth clients
+    clients.write: Create and modify OAuth clients
+    clients.read: Read information about OAuth clients
+    clients.secret: Change the password of an OAuth client
+    scim.write: Create, modify and delete SCIM entities, i.e. users and groups
+    scim.read: Read all SCIM entities, i.e. users and groups
+    scim.create: Create users
+    scim.userids: Read user IDs and retrieve users by ID
+    scim.zones: Control a user's ability to manage a zone
+    scim.invite: Send invitations to users
+    password.write: Change your password
+    oauth.approval: Manage approved scopes
+    oauth.login: Authenticate users outside of the UAA
+    openid: Access profile information, i.e. email, first and last name, and phone number
+    groups.update: Update group information and memberships
+    uaa.user: Act as a user in the UAA
+    uaa.resource: Serve resources protected by the UAA
+    uaa.admin: Act as an administrator throughout the UAA
+    uaa.none: Forbid acting as a user
+    
+    
+  username_pattern: '[a-zA-Z0-9+\-_.@]+'
+  users:
+    - marissa|koala|marissa@test.org|Marissa|LastName|openid,uaa.resource
+    - paul|wombat|paul@test.org|Paul|Smith|openid,uaa.user,uaa.resource
+    - stefan|wallaby|stefan@test.org|Stefan|Schmidt|openid,uaa.user,uaa.resource
+    - IdM_Monitoring_Test_User1|IdM_Monitoring_Test_User1|IdM_Monitoring_Test_User1@example.com|User1|Test|openid,uaa.user,IdM_Monitoring_Test_Scope1,IdM_Monitoring_Test_Scope2
+    - IdM_Monitoring_Test_User2|IdM_Monitoring_Test_User2|IdM_Monitoring_Test_User1@example.com|User2|Test|openid,uaa.user,IdM_Monitoring_Test_Pattern_Scope1,IdM_Monitoring_Test_Pattern_Scope2
+    - IdM_Monitoring_Test_User3|IdM_Monitoring_Test_User3|IdM_Monitoring_Test_User3@example.com|User3|Test|
+
+cloud_controller:
+  database:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql:cloud_controller
+    username: root
+    password: changeme
+
+oauth:
+  user:
+    authorities:
+      - openid
+      - scim.me
+      - cloud_controller.read
+      - cloud_controller.write
+      - cloud_controller_service_permissions.read
+      - password.write
+      - scim.userids
+      - uaa.user
+      - approvals.me
+      - oauth.approvals
+      - profile
+      - roles
+      - user_attributes
+  clients:
+    cf:
+      id: cf
+      authorized-grant-types: implicit
+      scope: cloud_controller.read,cloud_controller.write,openid,password.write
+      authorities: uaa.none
+      resource-ids: none
+      redirect-uri: https://uaa.cloudfoundry.com/redirect/cf
+    cloud_controller:
+      id: cloud_controller
+      secret: cloudcontrollersecret
+      authorized-grant-types: client_credentials
+      scope: scim.read,scim.write,password.write
+      authorities: uaa.resource,scim.read,scim.write,password.write
+      resource-ids: none
+    mywebapp:
+      id: mywebapp
+      secret: changeme
+      authorized-grant-types: authorization_code
+      scope: cloud_controller.read,cloud_controller.write,scim.write,scim.read,openid,uaa.resource,IdM_Monitoring_Test_Scope1,IdM_Monitoring_Test_Scope2,IdM_Monitoring_Test_Pattern_Scope1,IdM_Monitoring_Test_Pattern_Scope2
+      authorities: uaa.none
+    mywebappuri:
+      id: mywebappuri
+      secret: changeme
+      authorized-grant-types: authorization_code
+      scope: cloud_controller.read,cloud_controller.write,scim.write,scim.read,openid,uaa.resource,IdM_Monitoring_Test_Scope1,IdM_Monitoring_Test_Scope2,IdM_Monitoring_Test_Pattern_Scope1,IdM_Monitoring_Test_Pattern_Scope2
+      authorities: uaa.none
+      redirect-uri:
+    authorization_client:
+      id: authorization_client
+      secret: changeme
+      authorized-grant-types: authorization_code
+      scope: cloud_controller.read,cloud_controller.write,scim.write,scim.read,openid,uaa.resource,IdM_Monitoring_Test_Scope1,IdM_Monitoring_Test_Scope2,IdM_Monitoring_Test_Pattern_Scope1,IdM_Monitoring_Test_Pattern_Scope2
+      authorities: uaa.resource
+    password_client:
+      id: password_client
+      secret: changeme
+      authorized-grant-types: password
+      scope: cloud_controller.read,cloud_controller.write,scim.write,scim.read,openid,uaa.resource,IdM_Monitoring_Test_Scope1,IdM_Monitoring_Test_Scope2,IdM_Monitoring_Test_Pattern_Scope1,IdM_Monitoring_Test_Pattern_Scope2
+      authorities: uaa.none
+    credentials_client:
+      id: credentials_client
+      secret: changeme
+      authorized-grant-types: authorization_code,client_credentials,implicit,password,refresh_token
+      scope: cloud_controller.read,cloud_controller.write,openid,organizations.acme,password.write,scim.userids,scim.write,uaa.resource,IdM_Monitoring_Test_Pattern_Scope1,IdM_Monitoring_Test_Pattern_Scope2,IdM_Monitoring_Test_Scope1,IdM_Monitoring_Test_Scope2
+      authorities: uaa.resource,openid
+      action: none
+      autoapprove: openid
+      signup_redirect_url: http://localhost:8080/app/
+      change_email_redirect_url: http://localhost:8080/app/
+      name: The Ultimate Oauth App
+      invitation_redirect_url: http://localhost:8080/app/  
+    credentials_client2:
+      id: credentials_client2
+      secret: changeme
+      authorized-grant-types: authorization_code,client_credentials,implicit,password,refresh_token
+      scope: cloud_controller.read,cloud_controller.write,openid,organizations.acme,password.write,scim.userids,scim.write,uaa.resource,IdM_Monitoring_Test_Pattern_Scope1,IdM_Monitoring_Test_Pattern_Scope2,IdM_Monitoring_Test_Scope1,IdM_Monitoring_Test_Scope2
+      authorities: uaa.resource,openid
+      action: none
+      autoapprove: openid
+      signup_redirect_url: http://localhost:8080/app/
+      change_email_redirect_url: http://localhost:8080/app/
+      name: The Ultimate Oauth App
+      invitation_redirect_url: http://localhost:8080/app/  
+    universal_client:
+      id: universal_client
+      secret: changeme
+      authorized-grant-types: client_credentials authorization_code password
+      scope: cloud_controller.read,cloud_controller.write,scim.write,scim.read,openid,uaa.resource,IdM_Monitoring_Test_Scope1,IdM_Monitoring_Test_Scope2,IdM_Monitoring_Test_Pattern_Scope1,IdM_Monitoring_Test_Pattern_Scope2
+      authorities: uaa.none
+    new_password_client:
+      id: new_password_client
+      secret: changeme
+      authorized-grant-types: password
+      scope: cloud_controller.read,cloud_controller.write,scim.write,scim.read,openid,uaa.resource,IdM_Monitoring_Test_Scope1,IdM_Monitoring_Test_Scope2
+      authorities: uaa.none
