@@ -8,7 +8,7 @@ chmod +x /usr/local/bin/docker-compose
 /usr/local/bin/docker-compose --version
 
 # Download the compose file for the ELK stack
-git clone https://github.com/zeta-o/docker-elk.git
+# git clone https://github.com/zeta-o/docker-elk.git
 
 # Build the ELK container with docker-compose
 cd docker-elk
