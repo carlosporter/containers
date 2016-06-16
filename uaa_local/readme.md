@@ -10,7 +10,7 @@ git clone https://github.com/carlosporter/containers.git
 
 3. Go to the directory uaa_local within the container repository
 
-cd containers/uaa_local
+cd local_containers/uaa_local
 
 4. From the CLI and within the directory uaa_local run the following command to create a container image:
 
